@@ -5,6 +5,10 @@ angular.module('directivePractice').controller('lessonCtrl', function($scope, le
   $scope.lessons = ['Services', 'Routing', 'Directives', 'Review', 'Firebase', 'No server project', 'Node', 'Express', 'Mongo'];
 
   $scope.announceDay = function(lesson, day){
-    alert(lesson + ' is active on ' + day + '.');
+    if(day) {
+      alert(lesson + ' is active on ' + day + '.');
+    } else {
+      alert(lesson + ' is not currently active.');
+    }
   };
 });
